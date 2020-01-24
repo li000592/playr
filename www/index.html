@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wayne's playList</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <body>
+        <div id="playList" class="page active ">
+            <div class="header">
+                <h2 class="logo">Wayne's playList</h2>
+                <!-- <img class="play-btn" src="./img/play-circle-regular.svg" data-href="player" alt="play"> -->
+                <div class="play-btn">
+                    <!-- <p><button>&#x23f5</button></p> -->
+                    <span class="play" data-item-id="0">&#9654</span>
+                    <span class="pause stopping" data-item-id="6"> &#2405</span>
+                </div>
+            </div>
+               
+            <div class="list">
+               
+            </div>
+            <div class="musicBar">
+                <div class="musicCard-bar">
+                    <div class="player-back">&#x276C</div>
+                    <img class="album-bar" src="./img/NotPlaying.jpg" alt="alubm">
+                    <div class="musicBar-right">
+                        <div class="musicBar-info">
+                            <div class="track-bar">Not Playing</div>
+                            <div class="artist-bar">Unknown</div>
+                        </div>
+                        <!-- <span class="play-btn">&#x23f5</span> -->
+                        <!-- <img class="play-btn" src="./img/play-circle-regular-black.svg" alt=""> -->
+
+                    </div>
+                    <div class="play-btn" id="btn-bar">
+                        <!-- <p><button>&#x23f5</button></p> -->
+                        <span class="play" data-item-id="0">&#9654</span>
+                        <span class="pause stopping" data-item-id="6"> &#2405</span>
+                    </div>
+
+                    <div class="player-bottom">
+                        <!-- <div class="musicTime">
+                            <div>-------------------------</div>
+                            <div class="timing">
+                                <div class="startTime">0:00</div>
+                                <div class="endTime">4:33</div>
+                            </div>
+                        </div> -->
+            
+                        <div class="music-btn">
+                            <div class="lastSong">&#10094</div>
+                            <div class="play-btn" id="bar-btn">
+                                <!-- <p><button>&#x23f5</button></p> -->
+                                <span class="play-player" data-item-id="0">&#9654</span>
+                                <span class="pause-player stopping" data-item-id="6"> &#2405</span>
+                            </div>
+                            <div class="nextSong">&#10095</div>
+                        </div>
+                    </div>
+ 
+                </div>
+            </div>        
+        </div>
+
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

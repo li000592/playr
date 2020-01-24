@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600&display=swap');
+
+:root {
+    --primary-1:hsl(160, 97%, 64%);
+    --grey: rgb(136, 136, 135);
+    --grey2: rgb(223, 221, 221);
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    flex-direction: column;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+}
+.page {
+    box-sizing: border-box;
+    min-height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.4s linear;
+}
+.page.active {
+    opacity: 1;
+    z-index: 100;
+
+}
+
+/* PlayerList page */
+#playList .header {
+    
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary-1);
+    align-items: center;
+    width: 100%;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    min-height: 80px;
+    max-height: 120px;
+    top:0px;
+    position: center;
+    /* box-shadow: -1px 7px 32px -3px rgba(0,0,0,0.75); */
+}
+#playList .header h2 {
+    padding-left: 3%;
+    color: white;
+}
+
+.stopping {
+    opacity: 0;
+    transform: 1s;
+    display: none;
+}
+
+.list {
+    padding-top: 20px;
+
+}
+.musicCard {
+    display: flex;   
+    height: 70px;
+    width: 90vw;
+    margin-left: 5%;
+    /* padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5%; */
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.playing {
+    background-color: var(--grey2);
+}
+.track {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+.album {
+    height: 90%;
+    width: auto;
+    padding:0;
+    border: var(--primary-1) solid 3px;
+}
+.artist {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--grey);
+}
+.musicCard .info {
+
+}
+
+.info {
+    border-bottom: var(--grey) 0.5px solid;
+    width: 100%;
+    margin-left: 5%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.musicBar {
+    width: 100%;
+    background-color: whitesmoke;
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    position: fixed;
+    padding-bottom: 5px;  
+    transform: 0.5s;
+}
+.musicBar.playerMode {
+    height: 95vh;
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transform: 0.5s;
+}
+.musicBar-info {
+    width: 100%;
+    margin-left: 5%;
+    padding-top: 10px;
+    padding-bottom: 15px;    
+}
+.musicBar-info.playerMode{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+}
+.musicBar-right {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+.musicBar-right.playerMode{
+    align-items: center;
+    display: flex;
+    /* justify-content: space-around; */
+    flex-direction: column;
+    width: auto;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.musicCard-bar {
+    display: flex;   
+    height: 70px;
+    width: 90vw;
+    margin-left: 5%;
+
+}
+.musicCard-bar.playerMode{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    align-items: center;
+    transform: 0.5s;
+    transition: all 0.5s ease-in-out;
+}
+.album-bar {
+    height: 80%;
+    width: auto;
+    margin-top: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.267) ;
+}
+.album-bar.playerMode{
+    margin-top: 20px;
+    width: 70%;
+    height: auto;
+}
+.artist-bar.playerMode{
+    color: var(--primary-1);
+    font-size: 30px;
+}
+/* player page */
+.playerMode{
+    transition: all 0.5s ease-in-out;
+}
+
+.musicInfo{
+    align-items: center;
+    display: flex;
+    /* justify-content: space-around; */
+    flex-direction: column;
+    
+}
+.album-player{
+    margin-left: 30px;
+    width: 50%;
+    top: 500px;
+    border-radius: 50%;
+    border: var(--primary-1) solid 10px;
+    margin-right: 30px;
+    margin-top: 100px;
+
+}
+.musicTime {
+    align-items: center;
+    display: flex;
+    /* justify-content: space-around; */
+    flex-direction: column;
+}
+.timing {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+.player-bottom {
+    margin-top: 30px;
+    display: none;
+    opacity: 0;
+}
+.player-bottom.playerMode {
+    display: block;
+    opacity: 1;
+    padding-top: 50px;
+}
+.player-back {
+    display: none;
+    transform: rotate(-90deg);
+    font-size: 60px;
+    color: var(--primary-1);
+}
+.player-back.playerMode{
+    display: block;
+    transform: 0.5s;
+}
+
+/* button */
+#btn-bar.playerMode{
+    color: black;
+    display: none;
+    padding-left: 50px;
+    padding-right: 35px;
+    
+}
+#btn-bar{
+    color: black;
+    padding-top: 20px;
+    /* padding-left: 50px;
+    padding-right: 35px; */
+    /* padding-right: 15px; */
+}
+
+.play-btn{
+    margin-right: 7%;
+    color: white;
+    font-size: 30px;
+    height: 35px;
+    width: 35px;
+}
+#bar-btn {
+    font-size: 110px;
+    color: black;
+    height: 110px;
+    width: 110px;
+    margin-left: 25px;
+    margin-top: 8px;
+    margin-right: 10px;
+}
+.play{
+    border-radius: 50%;
+    border: solid white 3px;
+    margin-left: 5px;
+    height: 50px;
+    width: 50px;
+    padding-left: 5px;
+    opacity: 1;
+    transform: scaleY(1);
+}
+#btn-bar .play {
+    border: solid black 3px;
+}
+.pause {
+    border-radius: 50%;
+    border: solid white 3px;
+    padding-right: 9px;
+    padding-left: 8px;
+    height: 50px;
+    width: 50px;
+    padding-left: 5px;
+    opacity: 1;
+    transform: scaleY(1);
+}
+#btn-bar .pause {
+    border: solid black 3px;   
+} 
+.back {
+    font-size: 40px;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+.music-btn {
+    display: flex;
+    flex-direction: row;
+    font-size: 80px;
+}
+.music-btn div {
+    /* padding-left: 50px; */
+}
+.nextSong {
+    padding-left: 0;
+    padding-top: 15px;
+
+}
+.lastSong {
+    padding-top: 15px;
+}
